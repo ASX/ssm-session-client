@@ -143,7 +143,7 @@ func GetTarget(target string) (t string) {
     var un string
     if len(parts) > 0 {
         un_anycase := parts[len(parts)-1]
-		un = strings.ToLower(un_anycase)
+        un = strings.ToLower(un_anycase)
     } else {
         err := fmt.Sprintf("Username cannot be determined from: %s", user)
         zap.S().Fatal(err)
