@@ -28,7 +28,7 @@ func StartSSMPortForwarder(target string, sourcePort int) error {
 	} else {
 		t = target
 	}
-	if t == "devbox" {
+	if t == "devbox" || t == "devbox-prov" {
         t = GetTarget(t)
 	}
 	ssmcfg, err := BuildAWSConfig(context.Background(), "ssm")

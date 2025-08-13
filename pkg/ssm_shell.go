@@ -10,7 +10,7 @@ import (
 
 // StartSSMShell starts a shell session using AWS SSM
 func StartSSMShell(target string) error {
-	if target == "devbox" {
+	if target == "devbox" || target == "devbox-prov" {
         target = GetTarget(target)
 	}
 	ssmcfg, err := BuildAWSConfig(context.Background(), "ssm")
