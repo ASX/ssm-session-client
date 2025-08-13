@@ -32,7 +32,7 @@ func StartEC2InstanceConnect(target string) error {
 	} else {
 		t = target
 	}
-	if t == "devbox" {
+	if t == "devbox" || t == "devbox-prov" {
         t = GetTarget(t)
 	}
 	ssmcfg, err := BuildAWSConfig(context.Background(), "ssm")
